@@ -17,7 +17,7 @@ app.all('*',(req,res)=>{
     res.status(500).send("Page not found")
 })
 
-const port = 3000
+const port = process.env.PORT;
 const start = async() => {
     try {
         await connectDB(process.env.MONGO_URI)
